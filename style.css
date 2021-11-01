@@ -87,6 +87,9 @@ body {
 	margin-bottom: 60px;
 }
 
+.wrapper-main__form {
+	background-color: #eae5eb;
+}
 .main__form {
 	display: flex;
 	width: 70%;
@@ -94,7 +97,6 @@ body {
 	align-items: start;
 	/*align-items: center;*/
 	margin-bottom: 80px;
-	border: 1px solid white;
 	background-color: #eae5eb;
 }
 
@@ -105,6 +107,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #eae5eb;
+    padding-top: 30px;
 }
 
 .wrapper-form {
@@ -151,6 +154,7 @@ h4 {
 	margin: 0 auto;
 	border: none;
 	overflow: hidden;
+	border: 2px solid #680400;
 }
 
 .form__name, .food_comment, .form__button {
@@ -176,7 +180,6 @@ h4 {
 }
 
 .form__button {
-	opacity: 0.7;
     background-color: #680400;
 	border-radius: 5px;
 	text-transform: uppercase;
@@ -186,12 +189,6 @@ h4 {
 	border: none;
 	padding: 15px 35px;
 	margin-bottom: 50px;
-	transition: 1s;
-}
-
-
-.form__button:hover {
-	opacity: 1;
 	transition: 1s;
 }
 
@@ -291,7 +288,7 @@ h4 {
 	}
 
 	.main__form {
-		width: 80%;
+		width: 85%;
 	}
 
 	.foto3 {
@@ -304,6 +301,10 @@ h4 {
 
 	.form__choice, .form__decision {
 		line-height: 35px;
+	}
+
+	.food_comment {
+		width: 90%;
 	}
 
 	.play {
@@ -357,7 +358,8 @@ h4 {
 
 	.invate-text {
 	    font-size: 24px;
-	    line-height: 34px;	
+	    line-height: 34px;
+	    width: 70%;	
 	}
 
 	.timer-wait, .text {
@@ -387,15 +389,12 @@ h4 {
 
 	#form {
 		width: 50%;
+		margin-left: 3%;
 	}
 
 	.form__choice, .form__decision {
 		line-height: 34px;
 	}
-
-	.food_comment {
-    	height: 100px;
-    }
 
 	.play {
 		width: 50px;
@@ -438,18 +437,7 @@ h4 {
 }
  
 @media(max-width: 651px) {
-	.main__form {
-		flex-direction: column;
-    	width: 80%;
-	}
-
-	#form {
-    	width: 100%;
-	}
-
-	.foto3 {
-    	width: 100%;
-	}
+	
 
 	.timer-numbers {
     	width: 85%;
@@ -510,6 +498,19 @@ h4 {
 	}
 
 	.main__form {
+		flex-direction: column;
+    }
+
+	#form {
+    	width: 100%;
+    	    margin-left: 0;
+	}
+
+	.foto3 {
+    	width: 100%;
+	}
+
+	.main__form {
 		margin-bottom: 40px;
 	}
 
@@ -550,6 +551,10 @@ h4 {
 
 	.errors, .thanks, .check  {
 		font-size: 18px;
+	}
+
+	#form {
+		background-color: #ede8ee;
 	}
 }
 
@@ -592,10 +597,6 @@ h4 {
 
 	h2 {
 	    font-size: 26px;
-	}
-
-	.main__form {
-       	width: 90%;
 	}
 
 	.form__choice, .form__decision {
