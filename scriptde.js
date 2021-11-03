@@ -4,15 +4,12 @@ let a = document.querySelectorAll('.form__decision'),
 	guestPreferences = document.getElementsByClassName('guest_preferences')[0],
 	partnerPreferences = document.getElementsByClassName('partner_preferences')[0],
 	choicePartner = document.querySelectorAll('.form__choice_partner'),
-	groupChildren =document.querySelector('.wrapper-form-children');
+	pfood3 = document.getElementById('pfood3'),
+	mainForm = document.getElementsByClassName('main__form')[0],
+	mainQuestion = document.getElementsByClassName('main__question')[0],
+	groupChildren =document.querySelector('.wrapper-form-children'),
+	button = document.getElementsByClassName('form__button')[0];
 
-	console.log(a);
-	console.log(c);
-	console.log(child);
-	console.log(groupChildren);
-	console.log(guestPreferences);
-	console.log(partnerPreferences);
-	console.log(choicePartner);
 
 for (let i = 0; i< a.length; i++) {
 	a[i].addEventListener('change', function() {
@@ -22,10 +19,15 @@ for (let i = 0; i< a.length; i++) {
 
 for (let i = 0; i< choicePartner.length; i++) {
 	choicePartner[i].addEventListener('change', function() {
-		if (choicePartner[1].checked || choicePartner[2].checked) {
+		if (choicePartner[1].checked) {
 			guestPreferences.style.display = "none";
 			partnerPreferences.style.display = "block";
-		}	else {
+			pfood3.getElementsByTagName('span')[0].innerHTML = "Er ist Vegetarier";
+		}else if( choicePartner[2].checked) {
+			guestPreferences.style.display = "none";
+			partnerPreferences.style.display = "block";
+			pfood3.getElementsByTagName('span')[0].innerHTML = "Sie ist Vegetarierin";
+		}else {
 			partnerPreferences.style.display = "none";
 			guestPreferences.style.display = "block";
 		}	
@@ -40,6 +42,14 @@ child.addEventListener('change', function() {
 	(child.checked)?(groupChildren.style.display = "block"):(groupChildren.style.display = "none");
 });
 
+function hideForm() {
+	if(document.getElementsByClassName('thanks')[0]) {
+		mainQuestion.style.display = 'none';
+		button.style.display = 'none';
+	}
+}
+
+hideForm();
 //Timer
 
     let deadline = '2022-09-17';
