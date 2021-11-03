@@ -73,11 +73,6 @@ body {
 	font-size: 24px;
 }
 
-.heart {
-	width: 25px;
-	height: 25px;
-}
-
 .text {
 	width: 80%;
     margin: 0 auto;
@@ -98,6 +93,7 @@ body {
 	/*align-items: center;*/
 	margin-bottom: 80px;
 	background-color: #eae5eb;
+	    padding-top: 30px;
 }
 
 #form {
@@ -105,9 +101,9 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     background-color: #eae5eb;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
 }
 
 .wrapper-form {
@@ -146,7 +142,7 @@ h4 {
 }
 
 .food_comment {
-	width: 100%;
+	width: 90%;
 	height: 130px;
 	box-sizing: border-box;
 	padding-top: 10px;
@@ -165,7 +161,7 @@ h4 {
 }
 
 .form__name {
-    width: 70%;
+    width: 78%;
     height: 30px;
     border-radius: 5px;
     border: none;
@@ -199,7 +195,7 @@ h4 {
     top: 0;
 }
 
-.text-information {
+.text-information, .wedding-style__text {
 	width: 90%;
     margin: 0 auto;
     font-weight: 100;
@@ -222,8 +218,13 @@ h4 {
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	margin-bottom: 30px;
-	border: 1px solid white;
+	margin-bottom: 50px;
+}
+
+.line {
+	border: none;
+	border-top: 1px solid #680400;
+	width: 50%;
 }
 
 .play {
@@ -255,6 +256,24 @@ h4 {
 	display: block; 
 	margin: 10px auto;
 	font-size: 28px;
+}
+
+.colors {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.color {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	margin-right: 3%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.color:last-child {
+	margin-right: 0;
 }
 
 @media(max-width: 1680px){
@@ -322,7 +341,7 @@ h4 {
 	    line-height: 22px;
 	}
 
-	.text-information {
+	.text-information, .wedding-style__text {
 	    width: 80%;
 	    font-size: 26px;
 	}
@@ -334,6 +353,11 @@ h4 {
 
 	.errors, .thanks, .check {
 		font-size: 26px;
+	}
+
+	.color {
+	    width: 100px;
+	    height: 100px;
 	}
 }
 
@@ -411,7 +435,7 @@ h4 {
 	    line-height: 20px;
 	}
 
-	.text-information {
+	.text-information, .wedding-style__text {
 	    width: 80%;
 	    font-size: 20px;
 	}
@@ -433,6 +457,11 @@ h4 {
 
 	.errors, .thanks, .check  {
 		font-size: 24px;
+	}
+
+	.color {
+	    width: 80px;
+	    height: 80px;
 	}
 }
  
@@ -499,6 +528,7 @@ h4 {
 
 	.main__form {
 		flex-direction: column;
+		margin-bottom: 40px;
     }
 
 	#form {
@@ -508,10 +538,6 @@ h4 {
 
 	.foto3 {
     	width: 100%;
-	}
-
-	.main__form {
-		margin-bottom: 40px;
 	}
 
 	h4 {
@@ -538,7 +564,7 @@ h4 {
 	    margin-bottom: 30px;
 	}
 
-	.text-information {
+	.text-information, .wedding-style__text {
 	    width: 90%;
 	    font-size: 16px;
 	    margin-bottom: 40px;
@@ -555,6 +581,11 @@ h4 {
 
 	#form {
 		background-color: #ede8ee;
+	}
+
+	.color {
+		width: 65px;
+	    height: 65px;
 	}
 }
 
@@ -615,7 +646,7 @@ h4 {
 	}
 
 	.form__name {
-		width: 75%;
+		width: 78%;
 	}
 
 	.age {
@@ -624,15 +655,20 @@ h4 {
 
 	.form__button {
 		font-size: 18px;
-		margin: 20px;
+		margin-bottom: 30px;
 	}
 
-	.text-information {
+	.text-information, .wedding-style__text {
 		margin-bottom: 30px;
 	}
 
 	.photoreport {
 		margin-bottom: 30px;
+	}
+
+	.color {
+	    width: 55px;
+	    height: 55px;
 	}
 }
 
@@ -661,15 +697,10 @@ h4 {
 	}
 
 	.form__name, .food_comment, .form__button {
-	    margin: 0 auto;
 	    font-size: 15px;
 	}
-
-	.form__button {
-		margin: 20px;
-	}
 	
-	.text-information, .link {
+	.text-information, .wedding-style__text, .link {
 	    font-size: 14px;
 	}
 
@@ -685,5 +716,10 @@ h4 {
 
 	.errors, .thanks, .check {
 		font-size: 16px;
+	}
+
+	.color {
+	    width: 48px;
+	    height: 48px;
 	}
 }

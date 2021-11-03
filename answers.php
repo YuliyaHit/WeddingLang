@@ -33,12 +33,12 @@
 			<td>Красное вино</td>
 			<td>Шампанское</td>
 			<td>Водка</td>
-			<td>Коньяк</td>
+			<td>Виски</td>
 			<td style="width: 80px;">Безалкогольные напитки</td>			
 			<td>Мясо</td>
 			<td>Рыба</td>
-			<td>Я вегетерианец</td>
-			<td>Я люблю все</td>
+			<td>Морепродукты</td>
+			<td>Вегетерианцы</td>
 			<th>от 0 до 5 лет</th>
 			<th>от 6 до 13 лет</th>
 			<th>от 14 и старше</th>
@@ -69,13 +69,13 @@
 				echo '<td>'.$row['red_wine'].'</td>';
 				echo '<td>'.$row['champagne'].'</td>';
 				echo '<td>'.$row['vodka'].'</td>';
-				echo '<td>'.$row['brandy'].'</td>';
+				echo '<td>'.$row['whiskey'].'</td>';
 				echo '<td>'.$row['soft_drinks'].'</td>';
 				echo '<td>'.$row['meat'].'</td>';
 				echo '<td>'.$row['fish'].'</td>';
 				
+				echo '<td>'.$row['seafood'].'</td>';
 				echo '<td>'.$row['vegan'].'</td>';
-				echo '<td>'.$row['any_food'].'</td>';
 				echo '<td>'.$row['comment_food'].'</td>';
 				echo '<td>'.$row['group_of_children1'].'</td>';
 				echo '<td>'.$row['group_of_children2'].'</td>';
@@ -141,10 +141,10 @@
 						echo ($sumVodka['sum(vodka)']);
 					?>
 				</td>				
-				<td class = "brandy"> 
+				<td class = "whiskey"> 
 					<?php 
-						$sumBrandy = mysqli_fetch_assoc($mysqli->query("SELECT sum(brandy) FROM `guests`"));
-						echo ($sumBrandy['sum(brandy)']);
+						$sumWhiskey = mysqli_fetch_assoc($mysqli->query("SELECT sum(whiskey) FROM `guests`"));
+						echo ($sumWhiskey['sum(whiskey)']);
 					?>
 				</td>
 				<td class = "soft_drinks"> 
@@ -165,10 +165,10 @@
 						echo ($sumFish['sum(fish)']);
 					?>
 				</td>
-				<td class = "any_food"> 
+				<td class = "seafood"> 
 					<?php 
-						$sumAnyFood = mysqli_fetch_assoc($mysqli->query("SELECT sum(any_food) FROM `guests`"));
-						echo ($sumAnyFood['sum(any_food)']);
+						$sumSeafood = mysqli_fetch_assoc($mysqli->query("SELECT sum(seafood) FROM `guests`"));
+						echo ($sumSeafood['sum(seafood)']);
 					?>
 				</td>
 				<td class = "vegan"> 
@@ -224,17 +224,17 @@
 		<div class = "total-value champagne-value"> <?php echo ($sumChampagne['sum(champagne)']);?>	</div>
 		<div class = "result__field">Водка</div>
 		<div class = "total-value vodka-value"> <?php echo ($sumVodka['sum(vodka)']);?>	</div>
-		<div class = "result__field">Коньяк</div>
-		<div class = "total-value brandy-value"> <?php echo ($sumBrandy['sum(brandy)']);?> </div>
+		<div class = "result__field">Виски</div>
+		<div class = "total-value brandy-value"> <?php echo ($sumWhiskey['sum(whiskey)']);?> </div>
 		<div class = "result__field">Безалкогольные напитки</div>
 		<div class = "total-value soft_drinks-value"> <?php echo ($sumSoftDrinks['sum(soft_drinks)']);?> </div>
 		<h3>Еда</h3>
 		<div class = "result__field">Мясо:</div>
 		<div class = "total-value meat-value"> <?php echo ($sumMeat['sum(meat)']);?> </div>
-		<div class = "result__field">Морепродукты:</div>
+		<div class = "result__field">Рыба:</div>
 		<div class = "total-value fish-value"> <?php echo ($sumFish['sum(fish)']);?> </div>
-		<div class = "result__field">Едят все:</div>
-		<div class = "total-value any_food-value"> <?php echo ($sumAnyFood['sum(any_food)']);?> </div>
+		<div class = "result__field">Морепродукты:</div>
+		<div class = "total-value any_food-value"> <?php echo ($sumSeafood['sum(seafood)']);?> </div>
 		<div class = "result__field">Вегетерианцы:</div>
 		<div class = "total-value vegan-value"> <?php echo ($sumVegan['sum(vegan)']); $mysqli -> close();?> </div>
 		

@@ -19,15 +19,16 @@ http://wedding3.com:8080/invite.php
 	<title>Invitation</title>
 	<link rel="stylesheet" href="style.css?v=<?=rand(1,324234234)?>">
 	<link rel="stylesheet" href="fonts.css">
-	<style> 
+	<!--<style> 
 		.form__choice, .form__decision {
 			padding-left: 0;
 		}
-	</style>
+	</style>-->
 </head>
 <body>
 	
-<div class="wrapper">	 
+<div class="wrapper">
+<div class = "s1"> 
 	<div class = "section1">
 		<h2>Christian & Alena</h2>
 		<picture>
@@ -57,7 +58,7 @@ http://wedding3.com:8080/invite.php
 	    <img src="images/foto2dt.jpg" alt="" class="foto2">
 	</picture>
 
-	<p class = "timer-wait">We count down every day until the beginning of our wedding, it remains...</p>	
+	<p class = "timer-wait">We count down every day until the beginning of our wedding, it remains</p>	
 
 	<div class="timer">
 		<div class="timer-numbers" id="timer">
@@ -82,11 +83,12 @@ http://wedding3.com:8080/invite.php
 			</div>
 		</div>
 	</div>
-    <p class = "text">It is very important for us to get answers for the following questions...</p>
+    <p class = "text">It is very important for us to get answers for the following questions before 30.11.2021</p>
+</div>
 <div class = "wrapper-main__form">
 	<div class = "main__form">
 		<form action="inviteen.php#form" method="POST" id ="form">
-	<?php
+<?php
 	include 'conection.php';
 
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -98,7 +100,7 @@ http://wedding3.com:8080/invite.php
 		  	} */
 
 		  	if (empty($_POST["choice"])) {
-		    		$errors[1] = "You didn’t answer the question...";
+		    		$errors[1] = "You didn’t answer the question";
 		  	} 
 		  	if (empty($_POST["partner"])) {
 		    		$errors[2] = "Who will you be with on our wedding?";
@@ -146,22 +148,23 @@ http://wedding3.com:8080/invite.php
 
 			  	if($_POST["choice"] == "Не смогу прийти") {	
 
-					$mysqli->query("UPDATE guests SET answer = '$choice', partner = '0', meat = '$food[0]', fish = '$food[1]',  vegan = '$food[2]', any_food = '$food[3]', beer = '$drinks[0]', white_wine = '$drinks[1]', red_wine = '$drinks[2]', champagne = '$drinks[3]', vodka = '$drinks[4]', brandy = '$drinks[5]', soft_drinks = '$drinks[6]', comment_food = '', children = 'Нет', group_of_children1 = '0', group_of_children2 = '0', group_of_children3 = '0', date = Now() WHERE lastname = '$lastname'");
+					$mysqli->query("UPDATE guests SET answer = '$choice', partner = '0', meat = '$food[0]', fish = '$food[1]',  vegan = '$food[2]', seafood = '$food[3]', beer = '$drinks[0]', white_wine = '$drinks[1]', red_wine = '$drinks[2]', champagne = '$drinks[3]', vodka = '$drinks[4]', whiskey = '$drinks[5]', soft_drinks = '$drinks[6]', comment_food = '', children = 'Нет', group_of_children1 = '0', group_of_children2 = '0', group_of_children3 = '0', date = Now() WHERE lastname = '$lastname'");
 
 					if($count > 0) {
 						$mysqli->query("DELETE FROM guests WHERE lastname = '$default_lastname$default_firstname'");
 					} 
 					$errors = array();
-					echo "<span class = 'thanks'>"."It is a pity that you can't come"."</span>";
+					echo "<span class = 'thanks'>"."It is a pity, that you can't come"."</span>";
 					$mysqli -> close();
 
-		  		}	else if(empty($errors) && $_POST['partner'] == 2) {
+		  		}	
+				else if(empty($errors) && $_POST['partner'] == 2) {
 
-						$mysqli->query("UPDATE guests SET answer = '$choice', partner = '$partner', meat = '$food[0]', fish = '$food[1]', any_food = '$food[3]', vegan = '$food[2]', beer = '$drinks[0]', white_wine = '$drinks[1]', red_wine = '$drinks[2]', champagne = '$drinks[3]', vodka = '$drinks[4]', brandy = '$drinks[5]', soft_drinks = '$drinks[6]', comment_food = '$commentFood', children = '$children', group_of_children1 = '$childBaby', group_of_children2 = '$childMedium', group_of_children3 = '$childTeenager', date = Now() WHERE lastname = '$lastname'");
+						$mysqli->query("UPDATE guests SET answer = '$choice', partner = '$partner', meat = '$food[0]', fish = '$food[1]', seafood = '$food[2]', vegan = '$food[3]', beer = '$drinks[0]', white_wine = '$drinks[1]', red_wine = '$drinks[2]', champagne = '$drinks[3]', vodka = '$drinks[4]', whiskey = '$drinks[5]', soft_drinks = '$drinks[6]', comment_food = '$commentFood', children = '$children', group_of_children1 = '$childBaby', group_of_children2 = '$childMedium', group_of_children3 = '$childTeenager', date = Now() WHERE lastname = '$lastname'");
 
 					/*Если партнер есть, то обновляем, если нет - добавляем */
 						if($count > 0) {
-							$mysqli->query("UPDATE guests SET answer = '$choice', meat = '$pfood[0]', fish = '$pfood[1]', any_food = '$pfood[3]', vegan = '$pfood[2]', beer = '$pdrinks[0]', white_wine = '$pdrinks[1]', red_wine = '$pdrinks[2]', champagne = '$pdrinks[3]', vodka = '$pdrinks[4]', brandy = '$pdrinks[5]', soft_drinks = '$pdrinks[6]', comment_food = '$pcommentFood', date = Now() WHERE lastname = '$plastname'");
+							$mysqli->query("UPDATE guests SET answer = '$choice', meat = '$pfood[0]', fish = '$pfood[1]', seafood = '$pfood[2]', vegan = '$pfood[3]', beer = '$pdrinks[0]', white_wine = '$pdrinks[1]', red_wine = '$pdrinks[2]', champagne = '$pdrinks[3]', vodka = '$pdrinks[4]', whiskey = '$pdrinks[5]', soft_drinks = '$pdrinks[6]', comment_food = '$pcommentFood', date = Now() WHERE lastname = '$plastname'");
 							echo "<span class = 'thanks'>"."Thank you for your answer!"."</span>";
 						} 
 						else {
@@ -173,7 +176,7 @@ http://wedding3.com:8080/invite.php
 						
 				}
 				else if(empty($errors[2]) && empty($errors[3]) && empty($errors[4]) && $_POST['partner'] == 1) {
-						$mysqli->query("UPDATE guests SET answer = '$choice', partner = '$partner', meat = '$food[0]', fish = '$food[1]', any_food = '$food[3]', vegan = '$food[2]', beer = '$drinks[0]', white_wine = '$drinks[1]', red_wine = '$drinks[2]', champagne = '$drinks[3]', vodka = '$drinks[4]', brandy = '$drinks[5]', soft_drinks = '$drinks[6]', comment_food = '$commentFood', children = '$children', group_of_children1 = '$childBaby', group_of_children2 = '$childMedium', group_of_children3 = '$childTeenager', date = Now() WHERE lastname = '$lastname'");
+						$mysqli->query("UPDATE guests SET answer = '$choice', partner = '$partner', meat = '$food[0]', fish = '$food[1]', seafood = '$food[2]', vegan = '$food[3]', beer = '$drinks[0]', white_wine = '$drinks[1]', red_wine = '$drinks[2]', champagne = '$drinks[3]', vodka = '$drinks[4]', whiskey = '$drinks[5]', soft_drinks = '$drinks[6]', comment_food = '$commentFood', children = '$children', group_of_children1 = '$childBaby', group_of_children2 = '$childMedium', group_of_children3 = '$childTeenager', date = Now() WHERE lastname = '$lastname'");
 
 						/*Надо проверить есть ли строка  с партнером гостя по фамилии, если есть - удаляем*/
 						if($count > 0) {
@@ -187,8 +190,7 @@ http://wedding3.com:8080/invite.php
 		  		}
 		  	}	
 		} 	
-	?>
-
+?>
 
 	<?php
 		if(isset($errors["0"])) {
@@ -200,7 +202,7 @@ http://wedding3.com:8080/invite.php
 		if(isset($errors["1"])) {
 		echo "<span class = 'errors'>".$errors[1]."</span>";
 	}?>
-		<div>
+		<div class = "main__question">
 			<h4>Will you come to our Wedding?</h4>
 			<label class="form__choice"><input type="radio"  class="form__decision" name="choice" value="Я прийду" >I will come</label><br>	
 			<label  class="form__choice"><input type="radio" class="form__decision" name="choice" value="Скорее всего буду">I will probably come</label><br>
@@ -219,7 +221,7 @@ http://wedding3.com:8080/invite.php
 					<label class="form__choice"><input type="checkbox" name="drink[2]" value="1">red wine</label><br>
 					<label class="form__choice"><input type="checkbox" name="drink[3]" value="1">champagne</label><br>
 					<label class="form__choice"><input type="checkbox" name="drink[4]" value="1">vodka</label><br>
-					<label class="form__choice"><input type="checkbox" name="drink[5]" value="1">cognac</label><br>
+					<label class="form__choice"><input type="checkbox" name="drink[5]" value="1">whiskey </label><br>
 					<label class="form__choice"><input type="checkbox" name="drink[6]" value="1">alcohol-free beverages </label><br>
 	<?php
 		if(isset($errors["3"])) {
@@ -227,11 +229,11 @@ http://wedding3.com:8080/invite.php
 		}?>
 					<h4>I prefer to eat...</h4>
 					<label class="form__choice"><input type="checkbox" name="food[0]" value="1">meat</label><br>
-					<label class="form__choice"><input type="checkbox" name="food[1]" value="1">seafood</label><br>
-					<label class="form__choice"><input type="checkbox" name="food[2]" value="1">I'm a vegetarian</label><br>
-					<label class="form__choice"><input type="checkbox" name="food[3]" value="1">I like everything!</label><br>
+					<label class="form__choice"><input type="checkbox" name="food[1]" value="1">fish</label><br>
+					<label class="form__choice"><input type="checkbox" name="food[2]" value="1">seafood</label><br>
+					<label class="form__choice"><input type="checkbox" name="food[3]" value="1">I'm a vegetarian</label><br>
 
-					<textarea class= "food_comment" placeholder="If you have allergy, any restrictions in meal or beverages, or just wishes to organization of wedding, please write it here" name ="food-comment"></textarea>
+					<textarea class= "food_comment" placeholder="If you have allergy, any restrictions in meal or beverages, please write it here" name ="food-comment"></textarea>
 					</div>
 	<?php
 		if(isset($errors["2"])) {
@@ -259,7 +261,7 @@ http://wedding3.com:8080/invite.php
 							<label class="form__choice"><input type="checkbox" name="pdrink[2]" value="1">red wine</label><br>
 							<label class="form__choice"><input type="checkbox" name="pdrink[3]" value="1">champagne</label><br>
 							<label class="form__choice"><input type="checkbox" name="pdrink[4]" value="1">vodka</label><br>
-							<label class="form__choice"><input type="checkbox" name="pdrink[5]" value="1">cognac</label><br>
+							<label class="form__choice"><input type="checkbox" name="pdrink[5]" value="1">whiskey</label><br>
 							<label class="form__choice"><input type="checkbox" name="pdrink[6]" value="1">alcohol-free beverages</label><br>
 							<?php
 								if($_POST['partner'] == 2 && isset($errors["5"])) {
@@ -268,11 +270,11 @@ http://wedding3.com:8080/invite.php
 							?>
 							<h4>My partner prefers to eat...</h4>
 							<label class="form__choice"><input type="checkbox" name="pfood[0]" value="1">meat</label><br>
-							<label class="form__choice"><input type="checkbox" name="pfood[1]" value="1">seafood</label><br>
-							<label class="form__choice"><input type="checkbox" name="pfood[2]" value="1">He/she is a vegetarian</label><br>
-							<label class="form__choice"><input type="checkbox" name="pfood[3]" value="1">He/she likes everything!</label><br>
+							<label class="form__choice"><input type="checkbox" name="pfood[1]" value="1">fish</label><br>
+							<label class="form__choice"><input type="checkbox" name="pfood[2]" value="1">seafood</label><br>
+							<label class="form__choice" id = pfood3><input type="checkbox" name="pfood[3]" value="1"><span></span></label><br>
 
-							<textarea class= "food_comment" placeholder="If your partner has allergy, any food or beverage restrictions or just wishes to wedding organization, please write it here." name ="pcommentFood"></textarea>
+							<textarea class= "food_comment" placeholder="If your partner has allergy, any food or beverage restrictions, please write it here." name ="pcommentFood"></textarea>
 							<hr>
 					</div>
 
@@ -281,11 +283,11 @@ http://wedding3.com:8080/invite.php
 			
 				<div class = "wrapper-form-children">
 					<h6 class = "age">between 0 and 5 years </h6>
-					<input type="text" class="form__name" name="child-baby" placeholder="Insert the number of children"><br>
+					<input type="text" class="form__name" name="child-baby" placeholder="Insert the number of your children"><br>
 					<h6 class = "age">between 6 and 13 years </h6>
-					<input type="text" class="form__name" name="child-medium" placeholder="Insert the number of children"><br>
+					<input type="text" class="form__name" name="child-medium" placeholder="Insert the number of your children"><br>
 					<h6 class = "age">14 years and elder</h6>
-					<input type="text" class="form__name" name="child-teenager" placeholder="Insert the number of children"><br>
+					<input type="text" class="form__name" name="child-teenager" placeholder="Insert the number of your children"><br>
 				</div>	
 			</div>
 			
@@ -297,15 +299,30 @@ http://wedding3.com:8080/invite.php
 	</div>
 </div>
 
+	<div class = "s2">
+	<div class = "wedding-style"> 
+		<p class = "wedding-style__text">We would be glad, if you choose one of following colors for your outfit.</p>
+		<div class = "colors"> 
+			<div class = "color" style = "background-color: #680400;"></div>
+			<div class = "color" style = "background-color: #8f5b4d;"></div>
+			<div class = "color" style = "background-color: #e7c2a7;"></div> 
+			<div class = "color" style = "background-color: #cda490;"></div> 
+			<div class = "color" style = "background-color: #eee2d6;"></div>
+		</div>
+	</div>
+
+	<hr class = "line">
 	<p class = "text-information">Here will be later posted full photo report and a wedding video down below. Through the Link you can save files as a keepsake</p>
 	<div class = "photoreport">
-		<a class= "link" href="#">Watch wedding video </a>
+		<!-- <a class= "link" href="#">Смотреть видеоролик</a> -->
 		<a class= "link" href="#"><img src="images/play1.png" alt="" class="play"></a>
 		<a class= "link" href="#"><img src="images/load2.png" alt="" class="load"></a>
-		<a class= "link" href="#">Download photo report</a>
+		<!-- <a class= "link" href="#">Скачать фотоотчет</a> -->
 	</div>
+
 </div>
-<script src="script.js"></script>
+</div>
+<script src="scripten.js"></script>
 	
 </body>
 </html>
