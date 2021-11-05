@@ -1,0 +1,770 @@
+body {
+	margin: 0;
+	font-family: 'CenturyGothic', 'Times New Roman', sans-serif;
+}
+
+.wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.section1 {
+	position: relative;
+}
+
+.foto11, .foto2 {
+	width: 100%;
+	height: auto;
+    margin-bottom: 80px;
+}
+
+.invate-title {
+	font-size: 46px;
+	margin: 0 auto 40px;
+	color: #680400;
+	text-align: center;
+}
+
+.invate-text {
+	text-align: center;
+	width: 60%;
+	font-weight: 100;
+	font-size: 40px;
+	line-height: 56px;
+	margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.words {
+	color: #680400;
+	font-weight: bold;
+}
+
+.timer-wait {
+	text-align: center;
+	width: 80%;
+	color: #680400;
+	font-size: 30px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+
+.timer-numbers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.timer-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+.days, .hours, .minutes, .seconds {
+	display: block;
+	font-size: 46px;
+	color: #680400;
+}
+
+.days-word {
+	font-size: 24px;
+}
+
+.text {
+	width: 80%;
+    margin: 0 auto;
+    font-weight: 100;
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.wrapper-main__form {
+	background-color: #eae8ed;
+}
+.main__form {
+	display: flex;
+	width: 70%;
+	margin: 0 auto;
+	align-items: start;
+	/*align-items: center;*/
+	margin-bottom: 80px;
+	padding-top: 30px;
+}
+
+#form {
+	width: 45%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #eae8ed;
+}
+
+.wrapper-form {
+	display: none;
+}
+
+.wrapper-form-children {
+	display: none;
+}
+
+h2 {
+    font-size: 72px;
+    text-align: center;
+	color: #680400;
+	    position: absolute;
+    left: 60px;
+    top: 0;
+    width: 20%;
+}
+
+h4 {
+	font-size: 26px;
+	font-weight: lighter;
+	color: #680400;
+	font-weight: bold;
+	margin: 10px;
+}
+
+.form__choice, .form__decision {
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 38px;
+	padding-left: 12%;
+	color: #93422e;
+	letter-spacing: -0.9px;
+}
+
+.food_comment {
+	width: 90%;
+	height: 130px;
+	box-sizing: border-box;
+	padding-top: 10px;
+	border-radius: 5px;
+	margin: 0 auto;
+	border: none;
+	overflow: hidden;
+	border: 2px solid #680400;
+	outline: none;
+}
+
+textarea:focus{
+      outline: none;
+}
+
+.form__name, .food_comment, .form__button {
+	display: block;
+	margin: 5px auto;
+    text-align: center;
+	font-size: 17px;
+}
+
+.form__name {
+    width: 78%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.age {
+	font-weight: 200;
+	font-size: 24px;
+	color: #93422e;
+	text-align: center;
+	margin: 0;
+}
+
+.form__button {
+    background-color: #680400;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: lighter;
+	color: white;
+	border: none;
+	padding: 15px 35px;
+	margin-bottom: 50px;
+	transition: 1s;
+}
+
+/*Для кнопки айфона*/
+input[type="submit"] {
+    -webkit-appearance: button;
+}
+
+.foto3 {
+	width: 55%;
+	object-fit: contain;
+	position: sticky;
+    top: 0;
+}
+
+.text-information, .wedding-style__text {
+	width: 90%;
+    margin: 0 auto;
+    font-weight: 100;
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.link {
+	text-decoration: none;
+    font-size: 30px;
+    line-height: 30px;
+    color: black;
+    text-align: center;
+}
+
+.photoreport {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.line {
+	border: none;
+	border-top: 1px solid #680400;
+	width: 50%;
+}
+
+.play {
+	margin: 0 10px;
+}
+
+.load {
+	margin-right: 10px;
+}
+
+.errors, .check {
+	display: block; 
+	margin-left: 10px;
+	font-size: 28px;
+	margin-top: 25px;
+}
+
+.check {
+	color: black; 
+}
+
+.errors {
+	color: red; 	
+}
+
+.thanks {
+	color: #680400; 
+	font-weight: bold; 
+	display: block; 
+	margin: 10px auto;
+	font-size: 28px;
+}
+
+.colors {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	width: 90%;
+	flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.color {
+	width: 115px;
+	height: 115px;
+	border-radius: 50%;
+	margin: 1%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+@media(max-width: 1680px){
+	.wrapper {
+		width: 100%;
+	}
+}
+
+@media(max-width: 1025px){
+
+	h2 {
+	    font-size: 50px;
+	    width: 18%;	
+	}
+
+	.invate-title {
+	    font-size: 34px;	
+	}
+
+	.invate-text {
+	    font-size: 26px;
+	    line-height: 40px;	
+	}
+
+	.timer-wait {
+		font-size: 26px;
+	}
+
+	.text {
+		font-size: 26px;	
+	}
+
+	.main__form {
+		width: 85%;
+	}
+
+	.foto3 {
+		width: 50%;
+	}
+
+	#form {
+		width: 50%;
+	}
+
+	.form__choice, .form__decision {
+		line-height: 35px;
+	}
+
+	.food_comment {
+		width: 90%;
+	}
+
+	.play {
+		width: 50px;
+		height: 50px;
+	}
+	.load {
+	    width: 75px;
+	    height: 51px;
+	}
+
+	.age {
+	    font-size: 22px;
+	    margin: 0;
+	    line-height: 22px;
+	}
+
+	.text-information, .wedding-style__text {
+	    width: 80%;
+	}
+
+	.link {
+	    font-size: 24px;
+	    line-height: 24px;
+	}
+
+	.errors, .thanks, .check {
+		font-size: 26px;
+	}
+
+	.color {
+	    width: 100px;
+	    height: 100px;
+	}
+}
+
+@media(max-width: 900px) {
+	.timer-numbers {
+		width: 80%;
+	}
+
+	.days, .hours, .minutes, .seconds {
+    	font-size: 35px;
+    }
+}
+
+@media(max-width: 769px) {
+	h2 {
+	    font-size: 40px;	
+	}
+
+	.invate-title {
+	    font-size: 26px;	
+	}
+
+	.invate-text {
+	    font-size: 24px;
+	    line-height: 34px;
+	    width: 70%;	
+	}
+
+	.timer-wait, .text {
+		font-size: 20px;
+	}
+
+	.timer-numbers {
+	    width: 80%;
+	}
+
+	.days, .hours, .minutes, .seconds {
+    	font-size: 32px;
+    }
+
+	.heart {
+	    width: 15px;
+	    height: 15px;
+	}
+
+	.main__form {
+		width: 100%;
+	}
+
+	.foto3 {
+		width: 50%;
+	}
+
+	#form {
+		width: 50%;
+		margin-left: 3%;
+	}
+
+	.form__choice, .form__decision {
+		line-height: 34px;
+	}
+
+	.play {
+		width: 50px;
+		height: 50px;
+	}
+
+	.load {
+	    width: 75px;
+	    height: 51px;
+	}
+
+	.age {
+	    font-size: 20px;
+	    line-height: 20px;
+	}
+
+	.text-information, .wedding-style__text {
+	    width: 80%;
+	    font-size: 17px;
+	}
+
+	.link {
+	    font-size: 18px;
+	    line-height: 18px;
+	}
+
+	.play {
+		width: 45px;
+		height: 45px;
+	}
+
+	.load {
+	    width: 68px;
+	    height: 46px;
+	}
+
+	.errors, .thanks, .check  {
+		font-size: 24px;
+	}
+
+	.color {
+	    width: 80px;
+	    height: 80px;
+	}
+}
+ 
+@media(max-width: 651px) {
+	
+
+	.timer-numbers {
+    	width: 85%;
+	}
+	h2 {
+	    width: 100%;
+	    left: 0;
+		top: -40px;
+	}
+
+	.section1 {
+		margin-top: 30px;
+	}
+
+	.colors {
+		flex-wrap: wrap;
+		width: 80%;
+	}
+	.color {
+    width: 85px;
+    height: 85px;
+    margin: 3%;
+}
+	    
+}
+
+@media(max-width: 580px) {
+	
+	.main__form {
+		flex-direction: column;
+		margin-bottom: 40px;
+    }
+	
+	#form {
+		width: 100%;
+		margin: 0;
+	}
+
+	.foto3 {
+    	width: 100%;
+	}
+	    
+	.food_comment {
+    	width: 80%;
+	}    
+
+	h4 {
+		margin-left: 8%;
+	}
+
+	.form__choice, .form__decision {
+	    padding-left: 20%;
+	}
+	.errors, .thanks, .check  {
+		margin-left: 8%;
+	}
+	
+}
+
+@media(max-width: 426px){
+	h2 {
+	    font-size: 28px;
+	}
+
+	.foto11, .foto2 {
+        margin-bottom: 30px;
+	}
+
+	.invate-title {
+	    font-size: 22px;	
+	}
+
+	.invate-text {
+	    font-size: 20px;
+	    line-height: 24px;
+	    width: 80%;
+	}
+
+	.timer-wait, .text {
+		font-size: 16px;
+		margin-bottom: 30px;
+		width: 90%;
+	}
+
+	.timer-numbers {
+	    width: 90%;
+	    margin-bottom: 30px;
+	}
+
+	.days, .hours, .minutes, .seconds {
+    	font-size: 26px;
+    }
+
+    .days-word {
+   	    font-size: 16px;
+	}
+
+	.heart {
+	    width: 12px;
+	    height: 12px;
+	}
+
+	.main__form {
+		flex-direction: column;
+		margin-bottom: 40px;
+    }
+
+	#form {
+    	width: 100%;
+    	    margin-left: 0;
+	}
+
+	.foto3 {
+    	width: 100%;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	.form__choice, .form__decision {
+		font-size: 18px;
+		line-height: 28px;
+	}
+
+	.form__name, .food_comment {
+    	font-size: 14px;
+	}
+
+	.age {
+	    font-size: 18px;
+	    line-height: 18px;
+	}
+
+	.form__button {
+	    font-size: 20px;
+	    padding: 15px 25px;
+	    margin-bottom: 30px;
+	}
+
+	.text-information, .wedding-style__text {
+	    width: 90%;
+	    font-size: 16px;
+	    margin-bottom: 40px;
+	}
+
+	.link {
+	    font-size: 16px;
+	    line-height: 16px;
+	}
+
+	.errors, .thanks, .check  {
+		font-size: 18px;
+	}
+
+	.color {
+	    width: 75px;
+	    height: 75px;
+	}
+}
+
+@media(max-width: 376px){
+	
+	.foto11, .foto2 {
+		width: 100%;height: auto;
+	    margin-bottom: 30px;
+	}
+
+	.invate-title {
+		font-size: 20px;
+		margin: 0 auto 20px;
+	}
+
+	.invate-text {
+		width: 90%;
+		font-size: 17px;
+		line-height: 27px;
+	    margin-bottom: 30px;
+	}
+
+	.timer-numbers {
+	    margin-bottom: 40px;
+	}
+
+	.days, .hours, .minutes, .seconds {
+		font-size: 24px;
+	}
+
+	.days-word {
+		font-size: 14px;
+	}
+
+	.text {
+		width: 90%;
+	    margin: 0 auto;
+	    margin-bottom: 20px;
+	}
+
+	h2 {
+	    font-size: 26px;
+	}
+
+	.form__choice, .form__decision {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.food_comment {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.form__name, .food_comment, .form__button {
+		margin: 5px auto;
+	    font-size: 16px;
+	}
+
+	.form__name {
+		width: 78%;
+	}
+
+	.age {
+		font-size: 16px;
+	}
+
+	.form__button {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	.text-information, .wedding-style__text {
+		margin-bottom: 30px;
+	}
+
+	.photoreport {
+		margin-bottom: 30px;
+	}
+
+	.color {
+	    width: 65px;
+	    height: 65px;
+	}
+}
+
+@media(max-width: 320px) {
+	
+	h2 {
+    	font-size: 24px;
+	}
+
+	.invate-title {
+    	font-size: 18px;
+    }
+
+    .invate-text {
+	    font-size: 16px;
+	    line-height: 26px;
+   }
+
+   h4 {
+   	    font-size: 17px;
+   }
+
+   .form__choice, .form__decision {
+	    font-size: 18px;
+	    line-height: 26px;
+	}
+
+	.form__name, .food_comment, .form__button {
+	    font-size: 15px;
+	}
+	
+	.text-information, .wedding-style__text, .link {
+	    font-size: 14px;
+	}
+
+	.play {
+	    width: 40px;
+	    height: 40px;
+	}
+
+	.load {
+	    width: 60px;
+	    height: 41px;
+	}
+
+	.errors, .thanks, .check {
+		font-size: 16px;
+	}
+
+	.color {
+	    width: 60px;
+	    height: 60px;
+	}
+}

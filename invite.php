@@ -8,9 +8,6 @@ if (array_key_exists('lastname',$_REQUEST))
  $default_lastname =$_REQUEST['lastname'];
 ?>
 
-<!-- /*Это путь доступа до сайта со свадьбой
-http://wedding3.com:8080/invite.php
- -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,7 +77,12 @@ http://wedding3.com:8080/invite.php
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream
     <p class = "text">Для нас очень важно получить ответы на вопросы...</p>
+=======
+    <p class = "text">Для нас очень важно получить ответы на вопросы до 15.12.2021</p>
+</div>    
+>>>>>>> Stashed changes
 <div class = "wrapper-main__form">
 	<div class = "main__form">
 		<form action="invite.php#form" method="POST" id ="form">

@@ -82,7 +82,12 @@ http://wedding3.com:8080/invite.php
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream
     <p class = "text">It is very important for us to get answers for the following questions...</p>
+=======
+    <p class = "text">It is very important for us to get answers for the following questions before 15.12.2021</p>
+</div>
+>>>>>>> Stashed changes
 <div class = "wrapper-main__form">
 	<div class = "main__form">
 		<form action="inviteen.php#form" method="POST" id ="form">
