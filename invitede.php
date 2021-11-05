@@ -82,7 +82,12 @@ if (array_key_exists('lastname',$_REQUEST))
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream
     <p class = "text">Uns ist es sehr wichtig, Antworten auf die folgenden Fragen zu bekommen...</p>
+=======
+    <p class = "text"> Uns ist es sehr wichtig, Antworten bis zum 15.12.2021 auf die folgenden Fragen zu bekommen...</p>
+</div>
+>>>>>>> Stashed changes
 <div class = "wrapper-main__form">
 	<div class = "main__form">
 		<form action="invitede.php#form" method="POST" id ="form">
